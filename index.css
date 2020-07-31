@@ -1,0 +1,146 @@
+body {
+  font-family: "Calibri";
+  background: #e8e8e8;
+  height: 100%;
+  padding: 2rem;
+}
+p {
+  text-align: justify;
+}
+.custom-background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0;
+  top: 0;
+  left: 0;
+}
+.first-section {
+  opacity: 0;
+}
+.shift-container {
+  opacity: 0.1;
+}
+.ss-content {
+  width: 80%;
+}
+.second-section {
+  width: 100%;
+}
+.third-section {
+  width: 100%;
+  margin-bottom: 5rem;
+}
+.fourth-section {
+  width: 100%;
+  margin-bottom: 8rem;
+}
+.fixed-section {
+  position: fixed;
+  left: 30;
+  height: 100%;
+  /* opacity: 0.1; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  /* overflow-y: scroll; */
+}
+.first-section {
+  width: 100%;
+  height: 100%;
+}
+.first-section > img {
+  width: 150px;
+  margin-top: -80px;
+  margin-left: 300px;
+  opacity: 1;
+}
+.ftitle {
+  text-align: center;
+  font-size: 65px;
+  color: #11729c;
+}
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: fixed;
+  width: 50%;
+  left: 400px;
+  z-index: 10;
+  overflow-y: scroll;
+}
+.reset {
+  background-color: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  border: none;
+  border-radius: 6px;
+  padding: 10px;
+  z-index: 2000;
+  cursor: pointer;
+  border: 1px solid #11729c;
+  visibility: hidden;
+}
+.content {
+  display: flex;
+}
+.content > img {
+  width: 70px;
+  height: 70px;
+  margin-right: 20px;
+  margin-top: 40px;
+  margin-left: 20px;
+}
+.content-title {
+  text-align: center;
+  font-weight: 600;
+  font-size: 20;
+}
+
+::-webkit-scrollbar {
+  width: 0 !important;
+}
+.circle {
+  width: 100%;
+}
+.circle2 {
+  width: 100%;
+  display: none;
+}
+.map {
+  display: none;
+}
+.bar {
+  display: none;
+}
+.conclusion {
+  display: none;
+}
+
+.fifth-section {
+  margin-bottom: 17rem;
+}
+
+.conclusion-text {
+  width: 500px;
+}
+.resource {
+  text-decoration: none;
+}
+.resource:hover {
+  text-decoration: underline;
+}
+.conclusion-heading {
+  font-weight: bold;
+  font-size: 50px;
+}

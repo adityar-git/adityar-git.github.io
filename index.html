@@ -1,0 +1,157 @@
+<html>
+  <head>
+    <title>D3</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="custom-background"></div>
+
+    <div class="fixed-section">
+      <button class="reset">RESET</button>
+      <div class="shift-container">
+        <div class="circle"></div>
+        <div class="map"></div>
+        <div class="circle2"></div>
+        <div class="bar"></div>
+        <div class="conclusion">
+          <p class="conclusion-heading">
+            CONCLUSION
+          </p>
+          <p class="conclusion-text">
+            In this effort, we visually analyse how different drugs can be
+            clustered into various categories based on their chemical
+            composition. We also check the effect of individual drugs in each
+            cluster for the effect they produce on the Gene Expression. Further
+            deep analysis and use of machine learning on this data could help us
+            yield information on various phenotypic mapping of the drugs
+            represented in LINCS L1000 data.
+          </p>
+        </div>
+        <!-- <div class="info">
+          
+          <div class="druginfo"></div>
+        </div> -->
+      </div>
+    </div>
+
+    <div class="main-container">
+      <div class="first-section">
+        <p class="ftitle">Visualization Of <br />Transcriptomic Data</p>
+        <img id="dna" src="images/dna-ani.gif" />
+      </div>
+      <div class="second-section">
+        <div class="content">
+          <img src="images/question.png" />
+          <p class="ss-content">
+            Computational Drug Repositioning studies holds a promising future to
+            predict new drug-phenotypes mapping of the drug with comparatively
+            cheaper cost and lesser time. Additionally, With the NIH funded
+            public data repository, LINCS transcriptomic data, which provides a
+            comprehensive study for differential gene expression over 1.4
+            million probes for 12,000 genes, we are not at the technologically
+            advanced phase to predict the various effect of drugs at a
+            micro-level. In repurposing studies, various features of drugs hold
+            predominant importance, although the ranking of such features to
+            predict a particular phenotype still remains hazy. In this study, we
+            aim to visualize and analyse various drugs in the LINCS L1000
+            dataset with their Chemical Fingerprints. <br /><br />
+            Drug Bank approved drug could be present in either of the five
+            classes:
+            <b
+              >Approved, Investigational, Neutraceutical, Illicit, Vet- Approved
+              and Withdrawn
+            </b>
+            .A drug may be present only in one category or maybe in more than
+            one category. A drug with more than one category - say approved and
+            investigational - would mean a drug has been approved for certain
+            conditions on certain patients while is still under the process of
+            approval for some others. We checked the information corresponding
+            to all drugs in LINCS. The number of drugs in each category is as
+            shown in the barplot.
+            <span style="color: #99000d; font-weight: bold;">Clicking</span> on
+            the bar would give drugs corresponding to each category. We see more
+            number of drugs in approved stage are taken in the experiment of
+            LINCS.
+          </p>
+        </div>
+      </div>
+      <div class="third-section">
+        <div class="content">
+          <img src="images/dollar.png" />
+          <p class="ss-content">
+            Most drugs in the study are patented from the US and Canadian region
+            of the globe. It is estimated that for the drug to be approved after
+            the clinical-stage, around 2 million dollars are invested. The US
+            and Canada have invested from
+            <span style="font-weight: bold; color: #0072b0;">802 million</span>
+            dollars in 2003 to around
+            <span style="font-weight: bold; color: #0072b0;">1.3 billion</span>
+            dollars in 2013 for the clinical study. Also to note here is the
+            fact that a drug once approved can also be reverted back to the
+            withdrawn stage after post-marketing surveillance, which leads to
+            the serious financial impact on industry and health impact on
+            people.
+          </p>
+        </div>
+      </div>
+      <div class="fourth-section">
+        <div class="content">
+          <img src="images/process.png" />
+          <p class="ss-content">
+            Many features of the drugs could be used to analyse the drugs and
+            their mapping to various phenotypic conditions. One such vastly
+            studied feature is Chemical structure of a drug. The 2D chemical
+            structure of the drug is converted to MACCS chemical fingerprints,
+            denoting the presence of 100 subunit in the chemical compound.
+            Distance-level analysis of the chemical structure of the drug could
+            tell us how closely the two drugs are related. For the hypothesis
+            that similar drugs could be clustered together and may yield similar
+            phenotype, we cluster 20,338 LINCS drug into cluster using
+            hierarchical clustering.
+            <span style="color: #99000d; font-weight: bold;">Clicking</span> on
+            the drug will give more information about the drug and the genes
+            affected. <br /><br />
+            The bar chart on the left also gives an idea of how the drug affects
+            the genes and which gene is most up-regulated and down-regulated.
+          </p>
+        </div>
+      </div>
+
+      <div id="fifth" class="fifth-section">
+        <div class="future-scope">
+          <p class="conclusion-heading">
+            RESOURCES
+          </p>
+          <div class="conclusion-text">
+            <a
+              class="resource"
+              href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE92742"
+              >https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE92742</a
+            >
+            <br />
+            <a
+              class="resource"
+              href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE92742"
+              >https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE92742</a
+            ><br />
+            <a class="resource" href="http://maayanlab.net/SEP-L1000/"
+              >http://maayanlab.net/SEP-L1000</a
+            ><br />
+            <a class="resource" href="https://www.whocc.no/atc_ddd_index/"
+              >https://www.whocc.no/atc_ddd_index</a
+            ><br />
+            <a class="resource" href="https://www.drugbank.ca/releases/latest"
+              >https://www.drugbank.ca/releases/latest</a
+            ><br />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="https://d3js.org/d3-geo-projection.v2.min.js"></script>
+    <script src="https://d3js.org/d3-random.v2.min.js"></script>
+    <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+  </body>
+</html>
